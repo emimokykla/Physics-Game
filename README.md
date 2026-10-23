@@ -1,5 +1,4 @@
-How to start:
-Open in your browser: "https://emimokykla.github.io/Physics-Game/0Physics/"
+Link to the game: "https://emimokykla.github.io/Physics-Game/0Physics/"
 
 Everything else is in the folder "0Physics", and every seperate version folder (That's just for the updates)
 
