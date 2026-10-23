@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Playground</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+      "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="hud">
+    <h1>Physics Playground</h1>
+    <p id="status">Do whatever you like</p>
+    <p>Points: <span id="score">0</span></p>
+    <p>Held item: <span id="held">None</span></p>
+    <button id="start">Start game</button>
+    <button id="start-menu" hidden>Back to main menu</button>
+  </div>
+
+  <div id="crosshair">+</div>
+
+  <div id="help">
+    WASD: Move · Shift: Run · Space: Jump · Mouse: Look around<br>
+    E: Pick up / drop · Left click: Throw · Esc: Open pause menu
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

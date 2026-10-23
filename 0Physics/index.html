@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #181818;
+            color: white;
+            text-align: center;
+            box-sizing: border-box;
+            min-height: 100vh;
+            margin: 0;
+            padding: 60px 20px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 18px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .version-picker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .version-picker select {
+            min-width: 220px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Physics game</h1>
+
+    <p>Welcome</p>
+    <p>Choose a version to quickly open the latest game.</p>
+
+    <form class="version-picker" id="version-picker">
+        <select id="game-version" name="version">
+            <option value="versions/V0.04/index.html">V0.04 (Latest)</option>
+            <option value="versions/V0.03/index.html">V0.03</option>
+            <option value="versions/V0.02/index.html">V0.02</option>
+            <option value="versions/V0.01/index.html">V0.01</option>
+        </select>
+        <button type="submit">Play</button>
+    </form>
+
+    <script>
+        document.getElementById("version-picker").addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = document.getElementById("game-version").value;
+        });
+    </script>
+</body>
+</html>

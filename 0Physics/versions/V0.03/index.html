@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Playground</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+      "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="menu">
+    <div class="menu-card">
+      <h1>Physics Playground</h1>
+      <h2>Controls</h2>
+      <ul>
+        <li><strong>WASD</strong> – Move</li>
+        <li><strong>Shift</strong> – Run</li>
+        <li><strong>Ctrl</strong> – Crouch</li>
+        <li><strong>Space</strong> – Jump</li>
+        <li><strong>Mouse</strong> – Look around</li>
+        <li><strong>E</strong> – Pick up / drop</li>
+        <li><strong>Left click</strong> – Throw</li>
+        <li><strong>Esc</strong> – Open pause menu</li>
+      </ul>
+      <button id="start">Start game</button>
+      <button id="start-menu">Back to main menu</button>
+    </div>
+  </div>
+
+  <div id="hud" hidden>
+    <p>Points: <span id="score">0</span></p>
+    <p>Held item: <span id="held">None</span></p>
+  </div>
+
+  <div id="crosshair">+</div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
